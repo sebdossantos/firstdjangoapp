@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SB Admin - Start Bootstrap Template</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/sb-admin.css' %}" rel="stylesheet">
+
+        {% block head_add_css %}
+        {% endblock head_add_css %}
+
+    </head>
+    {% block body %}
+        {% block body_head %}
+        <body>
+        {% endblock body_head %}
+
+            {% block nav %}
+            {% endblock nav %}
+
+            {% block body_body %}
+            {% endblock body_body %}
+        </body>
+    {% endblock body %}
+
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    {% block script %}
+        {% block script_head %}
+        {% endblock script_head %}
+
+        {% block script_page %}
+        {% endblock script_page %}
+    {% endblock script %}
+
+</html>
